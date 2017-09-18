@@ -9,14 +9,13 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.renderscript.Sampler;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
 import com.custom.views.R;
+import com.custom.views.UIUtils;
 
 /**
  * Created by Administrator on 2017/9/15.
@@ -65,7 +64,7 @@ public class CountDownView extends View {
     private void init(Context context, AttributeSet attrs) {
         TypedArray tArray=context.obtainStyledAttributes(attrs, R.styleable.CountDownView);
 
-        circleRadius= (int) tArray.getDimension(R.styleable.CountDownView_cd_circle_radius,UIUtils.dip2pixel(context,25));
+        circleRadius= (int) tArray.getDimension(R.styleable.CountDownView_cd_circle_radius, UIUtils.dip2pixel(context,25));
         circleColor=tArray.getColor(R.styleable.CountDownView_cd_circle_color,circleColor);
 
         arcWidth= (int) tArray.getDimension(R.styleable.CountDownView_cd_arc_width,UIUtils.dip2pixel(context,3));

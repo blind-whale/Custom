@@ -1,4 +1,4 @@
-package com.custom.views.v1;
+package com.custom.views;
 
 import android.content.Context;
 import android.util.TypedValue;

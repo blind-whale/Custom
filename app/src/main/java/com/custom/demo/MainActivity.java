@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.custom.demo.fragment.CommonFragment;
+import com.custom.demo.fragment.FirewormsViewFragment;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
     private Item[] items={
             new Item(R.layout.fragment_common, CommonFragment.class,
                     "环形倒计时进度条",
-                    "https://github.com/SuperKotlin/CountDownView")
+                    "https://github.com/SuperKotlin/CountDownView"),
+            new Item(R.layout.fragment_fireworms_view,FirewormsViewFragment.class,
+                    "萤火飞舞 粒子运动",
+                    "https://github.com/JadynAi/Particle")
     };
 }

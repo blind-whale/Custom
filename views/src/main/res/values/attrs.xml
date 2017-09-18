@@ -30,4 +30,10 @@
             <enum name="bottom" value="90"></enum>
         </attr>
     </declare-styleable>
+
+    <!-- ************************粒子飞舞特效***************************** -->
+    <declare-styleable name="FirewormsView">
+        <attr name="particle_sre" format="reference"></attr>
+        <attr name="particle_num" format="integer"></attr>
+    </declare-styleable>
 </resources>
