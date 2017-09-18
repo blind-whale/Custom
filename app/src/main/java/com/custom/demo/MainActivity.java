@@ -33,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public native String stringFromJNI();
 
-    private FragmentAdapter.Item[] items={
-            new FragmentAdapter.Item(R.layout.fragment_common, CommonFragment.class)
+    private Item[] items={
+            new Item(R.layout.fragment_common, CommonFragment.class,
+                    "环形倒计时进度条",
+                    "https://github.com/SuperKotlin/CountDownView")
     };
 }

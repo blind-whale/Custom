@@ -1,8 +1,11 @@
 package com.custom.demo;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
+import com.custom.demo.fragment.BaseFragment;
 
 import java.util.List;
 
@@ -22,6 +25,10 @@ public class FragmentAdapter extends FragmentStatePagerAdapter {
         Fragment fragment=null;
         try {
             fragment= (Fragment) mItems.get(position).fragmentType.newInstance();
+            Bundle bundle=new Bundle();
+            bundle.putString(BaseFragment.BASE_DES,mItems.get(position).des);
+            bundle.putString(BaseFragment.BASE_ADDRESS,mItems.get(position).url);
+            fragment.setArguments(bundle);
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -36,14 +43,5 @@ public class FragmentAdapter extends FragmentStatePagerAdapter {
     @Override
     public int getCount() {
         return mItems.size();
-    }
-
-    public static class Item{
-        public int layoutId;
-        public Class fragmentType;
-        public Item(int id,Class type){
-            this.layoutId=id;
-            this.fragmentType=type;
-        }
     }
 }

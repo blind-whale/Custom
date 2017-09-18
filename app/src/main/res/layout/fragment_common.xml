@@ -1,13 +1,125 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.custom.demo.fragment.CommonFragment">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.custom.demo.fragment.CommonFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <include
+        layout="@layout/include_des"
+        android:id="@+id/ll_des"></include>
+
+    <LinearLayout
+        android:layout_below="@+id/ll_des"
+        android:id="@+id/ll_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <com.custom.views.v1.CountDownView
+            android:id="@+id/count_down_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cd_circle_radius="60dp"
+            app:cd_direction="clockwise_ascent"
+            app:cd_start_point="top"
+            app:cd_time="10"
+            app:cd_time_unit="S"></com.custom.views.v1.CountDownView>
+
+        <com.custom.views.v1.CountDownView
+            android:id="@+id/count_down_view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cd_circle_radius="60dp"
+            app:cd_direction="clockwise_descent"
+            app:cd_start_point="top"
+            app:cd_time="10"
+            app:cd_time_unit="S"
+            android:layout_marginLeft="30dp"></com.custom.views.v1.CountDownView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_2"
+        android:layout_below="@+id/ll_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <com.custom.views.v1.CountDownView
+            android:id="@+id/count_down_view3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cd_circle_radius="60dp"
+            app:cd_direction="anticlockwise_ascent"
+            app:cd_start_point="top"
+            app:cd_time="10"
+            app:cd_time_unit="S"></com.custom.views.v1.CountDownView>
+
+        <com.custom.views.v1.CountDownView
+            android:id="@+id/count_down_view4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cd_circle_radius="60dp"
+            app:cd_direction="anticlockwise_descent"
+            app:cd_start_point="left"
+            app:cd_time="10"
+            app:cd_time_unit="S"
+            android:layout_marginLeft="30dp"></com.custom.views.v1.CountDownView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_3"
+        android:layout_below="@+id/ll_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <com.custom.views.v1.CountDownView
+            android:id="@+id/count_down_view5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cd_circle_radius="60dp"
+            app:cd_direction="anticlockwise_ascent"
+            app:cd_start_point="right"
+            app:cd_arc_width="10dp"
+            app:cd_text_size="16sp"
+            app:cd_time="10"
+            app:cd_arc_color="@android:color/holo_blue_dark"
+            app:cd_time_unit="秒"></com.custom.views.v1.CountDownView>
+
+        <com.custom.views.v1.CountDownView
+            android:id="@+id/count_down_view6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cd_circle_radius="60dp"
+            app:cd_direction="anticlockwise_descent"
+            app:cd_start_point="top"
+            app:cd_time="10"
+            app:cd_time_unit=""
+            app:cd_arc_color="@android:color/holo_red_dark"
+            android:layout_marginLeft="30dp"></com.custom.views.v1.CountDownView>
+    </LinearLayout>
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"/>
+        android:id="@+id/tv_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="start"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"/>
 
-</FrameLayout>
+</RelativeLayout>
